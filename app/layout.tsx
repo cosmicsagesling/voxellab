@@ -3,6 +3,7 @@ import { Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Cta from "./components/cta";
+import AOSInit from "./components/aos";
 
 const geistSans = Inter({
   subsets: ["latin"],
@@ -28,8 +29,9 @@ export default function RootLayout({
       <body
         className={`relative ${geistSans.className} ${geistMono.variable} antialiased`}
       >
-        <Navbar/>
-        <Cta/>
+                <AOSInit />
+
+
         {children}
       </body>
     </html>
